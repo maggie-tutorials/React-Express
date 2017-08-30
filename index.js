@@ -13,7 +13,9 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
-app.use(bodyParser.json()); // every time a request body comes into our application, it will parse the body and assign it to req.body
+// every time a request body comes into our application, it will parse the body and assign it to req.body
+app.use(bodyParser.json());
+
 app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
